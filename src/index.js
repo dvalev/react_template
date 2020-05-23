@@ -1,12 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import App from './components/App';
 import * as serviceWorker from './serviceWorker';
+import Providers from './providers';
+import CONFIGURATION from './constants/config';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    {CONFIGURATION.USE_REDUX ? (
+      <Providers.Redux>
+        <App useRedux={CONFIGURATION.USE_REDUX} />
+      </Providers.Redux>
+    ) : (
+        <App useRedux={CONFIGURATION.USE_REDUX} />
+      )}
   </React.StrictMode>,
   document.getElementById('root')
 );
