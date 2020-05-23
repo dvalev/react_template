@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import './Pure.css';
 import Providers from '../../providers';
 
 function App(props) {
