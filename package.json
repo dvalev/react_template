@@ -9,10 +9,8 @@
     "eject": "react-scripts eject",
     "analyze": "source-map-explorer 'build/static/js/*.js'",
     "clean": "rm -rf package-lock.json && rm -rf yarn.lock && rm -rf node_modules",
-    "update": "yarn run clean && yarn install",
-    "deploy": "yarn run update && yarn run build",
-    "prebuild": "./scripts/prebuild.sh",
-    "postbuild": "./scripts/postbuild.sh",
+    "update": "npm run clean && npm install",
+    "deploy": "npm run update && npm run build",
     "flow": "flow"
   },
   "dependencies": {
